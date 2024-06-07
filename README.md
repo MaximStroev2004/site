@@ -26,7 +26,6 @@
 
 # База данных моего проекта
  ```sql
--- Таблица `orders`
 CREATE TABLE IF NOT EXISTS `orders` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_email` varchar(255) NOT NULL,
@@ -37,7 +36,6 @@ CREATE TABLE IF NOT EXISTS `orders` (
 ```
 
  ```sql
--- Таблица `order_history`
 CREATE TABLE IF NOT EXISTS `order_history` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_email` varchar(255) NOT NULL,
@@ -51,7 +49,6 @@ CREATE TABLE IF NOT EXISTS `order_history` (
 ```
 
  ```sql
--- Таблица `order_items`
 CREATE TABLE IF NOT EXISTS `order_items` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `order_id` int(11) NOT NULL,
@@ -65,7 +62,6 @@ CREATE TABLE IF NOT EXISTS `order_items` (
 ```
 
  ```sql
--- Таблица `products`
 CREATE TABLE IF NOT EXISTS `products` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
@@ -76,7 +72,6 @@ CREATE TABLE IF NOT EXISTS `products` (
 ```
 
  ```sql
--- Таблица `users`
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `customer_name` varchar(255) NOT NULL,
