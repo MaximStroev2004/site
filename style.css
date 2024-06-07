@@ -1,0 +1,624 @@
+body {
+    background-color: #E3E7E8;
+    font-family: 'Montserrat', sans-serif;
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    margin: 0 0 20px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+nav ul li a .icon {
+    margin-right: 8px;
+}
+
+nav ul li a img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    width: 250px;
+    max-width: 300px;
+    box-sizing: border-box;
+}
+
+.search-form button {
+    padding: 10px 20px;
+    background-color: #ccc;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+    background-color: #999;
+}
+
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.item {
+    flex-basis: calc(33.33% - 40px);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s;
+    margin: 20px;
+    padding: 20px;
+}
+
+.item:hover {
+    transform: translateY(-10px);
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+}
+
+.item-details {
+    padding: 20px;
+    height: 100%;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.price {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.add-to-cart-form,
+.add-to-favorites-form,
+.remove-from-cart-form {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.add-to-cart-form button,
+.add-to-favorites-form button,
+.remove-from-cart-form button {
+    background-color: #ccc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: normal; 
+}
+
+.add-to-cart-form button:hover,
+.add-to-favorites-form button:hover,
+.remove-from-cart-form button:hover {
+    background-color: #999;
+}
+
+
+.cart {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.listCard {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.listCard li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.listCard li div {
+    flex: 1;
+    text-align: center;
+}
+
+.listCard li img {
+    max-width: 100px;
+    margin-right: 20px;
+}
+
+.checkOut {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkOut .total {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.order-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.order-buttons .closeShopping,
+.order-buttons .orderNow,
+.listCard li form button {
+    background-color: #ccc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px; 
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.order-buttons .closeShopping:hover,
+.order-buttons .orderNow:hover,
+.listCard li form button:hover {
+    background-color: #999;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 50px auto;
+}
+
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-group input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-container button {
+    background-color: #ccc;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: #999;
+}
+
+.form-container .extra-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.form-container .extra-buttons a {
+    text-decoration: none;
+    background-color: #ccc;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 48%;
+    text-align: center;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.form-container .extra-buttons a:hover {
+    background-color: #999;
+}
+
+.item .title {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.item .title.no-underline {
+    text-decoration: none;
+}
+
+.item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.item a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.profile-info {
+    margin-top: 30px;
+}
+
+.user-details, .order-history {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.user-details h2, .order-history h2 {
+    margin-top: 0;
+}
+
+.order-history ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.order-history ul li {
+    border-bottom: 1px solid #ccc;
+        padding: 10px 0;
+}
+
+.order-history .order-date, .order-history .order-total {
+    font-weight: bold;
+}
+
+.order-items ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.home-button, .logout-button {
+    background-color: #ccc;
+    color: #fff;
+    border: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    width: 120px;
+    display: inline-block;
+    text-align: center;
+}
+
+.home-button:hover, .logout-button:hover {
+    background-color: #999;
+}
+
+.order-button {
+    background-color: #ccc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+    background-color: #999;
+}
+
+.add-to-favorites-form {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.add-to-favorites-form button {
+    background-color: #ccc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: normal;
+}
+
+.add-to-favorites-form button:hover {
+    background-color: #999;
+}
+
+
+.remove-from-cart-form {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.remove-from-cart-form button {
+    background-color: #ccc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: normal;
+}
+
+.remove-from-cart-form button:hover {
+    background-color: #999;
+}
+
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 50px auto;
+}
+
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-group input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-container button {
+    background-color: #ccc;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: #999;
+}
+
+.form-container .extra-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.form-container .extra-buttons a {
+    text-decoration: none;
+    background-color: #ccc;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 48%;
+    text-align: center;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.form-container .extra-buttons a:hover {
+    background-color: #999;
+}
+
+
+.profile-info {
+    margin-top: 30px;
+}
+
+.user-details, .order-history {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.user-details h2, .order-history h2 {
+    margin-top: 0;
+}
+
+.order-history ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.order-history ul li {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.order-history .order-date, .order-history .order-total {
+    font-weight: bold;
+}
+
+.order-items ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.remove-from-favorites-form {
+    text-align: center; 
+    margin-top: 10px; 
+}
+
+.remove-from-favorites-form button {
+    background-color: #ccc; 
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: normal; 
+}
+
+.remove-from-favorites-form button:hover {
+    background-color: #999; 
+}
+
+.welcome-message {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.products h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+.product-description {
+    font-size: 22px;
+    line-height: 1.5;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.product-price {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
